@@ -1,5 +1,6 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
+import { ageNameVar } from '../../utils/ageNamesVar'
 import './StartPage.scss'
 
 export const StartPage = () => {
@@ -7,6 +8,13 @@ export const StartPage = () => {
   const history = useHistory()
 
   const localData = JSON.parse(localStorage.getItem("student"))
+
+  let age
+
+  if (localData) {
+    const currentDate = new Date ()
+    age = currentDate.getFullYear() - localData.birthday
+  }
 
   return (
     <div className="start-page">
@@ -22,7 +30,7 @@ export const StartPage = () => {
               <strong>Фамилия: </strong> {localData.lastname}
             </div>
             <div className="card-birthday">
-              <strong>Год рождения: </strong> {localData.birthday}
+              <strong>Год рождения: </strong> {localData.birthday} ({ageNameVar(age)})
             </div>
             <div className="card-portfolio">
               <strong>Портфолио: </strong><a href={localData.portfolio}>{localData.portfolio}</a> 
