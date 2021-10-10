@@ -1,0 +1,13 @@
+.start-page{
+  padding: 20px 100px;
+  &__content{
+    margin-bottom: 25px;
+    .student-info{
+      margin-bottom: 15px;
+      div{
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,38 @@
+.btn{
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  border-radius: 3px;
+  &:hover{
+    opacity: 0.8;
+    transition: all .3s ease-out 0s;
+  }
+}
+.btn-start{
+  background-color: rgb(16, 42, 190);
+  color: #fff;
+  font-weight: bold;
+}
+.label-form{
+  display: block;
+  font-size: 14px;
+  color: rgb(26, 25, 25);
+}
+.input-form{
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid rgb(26, 25, 25);
+  color: #000;
+  padding: 15px 0 10px;
+  outline: none;
+  font-family: inherit;
+  background: transparent;
+  margin-bottom: 10px;
+}
+.error-field{
+  color:rgb(230, 73, 73);
+  margin-bottom: 10px;
+
+}
